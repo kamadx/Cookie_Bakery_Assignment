@@ -30,15 +30,16 @@ namespace Cookie_Bakery
         }
 
 
-		public void checkForCookie(CookieBakery bakery)
-		{
+        public void checkForCookie(CookieBakery bakery)
+        {
 			lock (bakery)
 			{
-				if (cookies.Count >= 1)
-				{
-					bakery.sellCookieTo(this);
-				}
-			}
-		}
+            if (cookies.Count >= 1)
+            {
+                bakery.sellCookieTo(this);
+                Console.WriteLine("\t" + name + " bought cookie #{0}.", cookies[cookies.Count-1]);
+            }
+        }
 	}
+}
 }
