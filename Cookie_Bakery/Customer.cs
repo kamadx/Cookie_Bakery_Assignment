@@ -10,36 +10,36 @@ namespace Cookie_Bakery
 {
 	class Customer
 	{
-        string name;
-        public List<int> cookies = new List<int>();
-        Stopwatch timer;
+		string name;
+		public List<int> cookies = new List<int>();
+		Stopwatch timer;
 
 
-        public Customer(string name, CookieBakery bakery) 
-        {
-            this.name = name;
-            timer.Start();
-            while (true)
-            {
-                if (timer.ElapsedMilliseconds >= 1000)
-                {
-                    checkForCookie(bakery);
-                }
-                timer.Restart();
-            }
-        }
+		public Customer(string name, CookieBakery bakery)
+		{
+			this.name = name;
+			timer.Start();
+			while (true)
+			{
+				if (timer.ElapsedMilliseconds >= 1000)
+				{
+					checkForCookie(bakery);
+				}
+				timer.Restart();
+			}
+		}
 
 
-        public void checkForCookie(CookieBakery bakery)
-        {
+		public void checkForCookie(CookieBakery bakery)
+		{
 			lock (bakery)
 			{
-            if (cookies.Count >= 1)
-            {
-                bakery.sellCookieTo(this);
-                Console.WriteLine("\t" + name + " bought cookie #{0}.", cookies[cookies.Count-1]);
-            }
-        }
+				if (cookies.Count >= 1)
+				{
+					bakery.sellCookieTo(this);
+					Console.WriteLine("\t" + name + " bought cookie #{0}.", cookies[cookies.Count - 1]);
+				}
+			}
+		}
 	}
-}
 }

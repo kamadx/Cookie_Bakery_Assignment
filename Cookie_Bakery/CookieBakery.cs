@@ -14,8 +14,11 @@ namespace Cookie_Bakery
 		private Stopwatch timer = new Stopwatch();
 		private int count = 0;
 
-		public CookieBakery()
+		public CookieBakery() { }
+
+		private void Start()
 		{
+
 			timer.Start();
 			while (true)
 			{
