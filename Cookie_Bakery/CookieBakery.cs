@@ -6,9 +6,9 @@ namespace Cookie_Bakery
 {
 	class CookieBakery
 	{
-		List<int> cookies = new List<int>();
-		Stopwatch timer = new Stopwatch();
-		int count = 0;
+		public List<int> cookies = new List<int>();
+		private Stopwatch timer = new Stopwatch();
+		private int count = 0;
 
 		public CookieBakery()
 		{
@@ -38,7 +38,8 @@ namespace Cookie_Bakery
 		/// <param name="customer"></param>
 		public void sellCookieTo(Customer customer)
 		{
-			
+			customer.cookies.add(cookies[0]);
+			cookies.RemoveAt(0);
 		}
 	}
 }
