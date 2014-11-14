@@ -6,8 +6,6 @@ using System.Diagnostics;
 
 
 
-//TODO: SellCookieTo(Customer customer) metode
-//TODO: 
 namespace Cookie_Bakery
 {
 	class CookieBakery
@@ -22,7 +20,10 @@ namespace Cookie_Bakery
 			while (true)
 			{
 				if (timer.ElapsedMilliseconds >= 700)
+				{
 					BakeCookie();
+					timer.Restart();
+				}
 			}
 		}
 
@@ -33,18 +34,17 @@ namespace Cookie_Bakery
 		private void BakeCookie()
 		{
 			cookies.Add(count);
-			Console.WriteLine("Baked cookie #{0}", count);
+			Console.WriteLine("Baked cookie #{0}.", count);
 			count++;
-			timer.Restart();
 		}
 
 		/// <summary>
-		/// sells a cookie to the customer.
+		/// sells a cookie to a customer.
 		/// </summary>
 		/// <param name="customer"></param>
 		public void sellCookieTo(Customer customer)
 		{
-			customer.cookies.add(cookies[0]);
+			customer.cookies.Add(cookies[0]);
 			cookies.RemoveAt(0);
 		}
 	}
