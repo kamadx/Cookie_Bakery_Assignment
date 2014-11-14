@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Cookie_Bakery
 {
-    class Program
+    class Run
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
