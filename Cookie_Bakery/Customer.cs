@@ -11,20 +11,31 @@ namespace Cookie_Bakery
 	class Customer
 	{
         string name;
-        List<int> cookies;
+        public List<int> cookies = new List<int>();
         Stopwatch timer;
 
 
-        public Customer(string name) 
+        public Customer(string name, CookieBakery bakery) 
         {
             this.name = name;
+            timer.Start();
+            while (true)
+            {
+                if (timer.ElapsedMilliseconds >= 1000)
+                {
+                    checkForCookie(bakery);
+                }
+                timer.Restart();
+            }
         }
 
-        public void checkForCookie()
+
+        public void checkForCookie(CookieBakery bakery)
         {
-            timer.Start();
-            int cookieNumber;
-            
+            if (cookies.Count >= 1)
+            {
+                bakery.sellCookieTo(this);
+            }
         }
 	}
 }
