@@ -10,7 +10,12 @@ namespace Cookie_Bakery
     {
         static void Main(string[] args)
         {
-            
+
+            CookieBakery bakery = new CookieBakery();
+            Customer Joakim = new Customer("Joakim", bakery);
+            Customer Jan = new Customer("Jan", bakery);
+            Customer Sebastian = new Customer("Sebastian", bakery);
+
         }
     }
 }
