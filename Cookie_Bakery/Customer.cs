@@ -35,6 +35,7 @@ namespace Cookie_Bakery
             if (cookies.Count >= 1)
             {
                 bakery.sellCookieTo(this);
+                Console.WriteLine("\t" + name + " bought cookie #{0}.", cookies[cookies.Count-1]);
             }
         }
 	}

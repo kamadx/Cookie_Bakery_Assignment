@@ -44,7 +44,7 @@ namespace Cookie_Bakery
 		/// <param name="customer"></param>
 		public void sellCookieTo(Customer customer)
 		{
-			customer.cookies.add(cookies[0]);
+			customer.cookies.Add(cookies[0]);
 			cookies.RemoveAt(0);
 		}
 	}
