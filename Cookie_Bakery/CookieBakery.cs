@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
+
+
+
+
+//TODO: SellCookieTo(Customer customer) metode
+//TODO: 
 namespace Cookie_Bakery
 {
 	class CookieBakery
