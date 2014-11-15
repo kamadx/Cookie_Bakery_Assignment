@@ -8,12 +8,14 @@ namespace Cookie_Bakery
 	class Customer
 	{
 		string name;
-		public List<int> cookies = new List<int>();
-		Stopwatch timer = new Stopwatch();
+		public List<int> cookies;
+		Stopwatch timer;
 		CookieBakery bakery;
 
 		public Customer(string name, CookieBakery bakery)
 		{
+			cookies = new List<int>();
+			timer = new Stopwatch();
 			this.name = name;
 			this.bakery = bakery;
 		}
