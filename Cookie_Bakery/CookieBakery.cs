@@ -25,7 +25,7 @@ namespace Cookie_Bakery
 		{
 
 			timer.Start();
-			while (true)
+			while (count <= 70)
 			{
 				if (timer.ElapsedMilliseconds >= 700)
 				{
@@ -33,6 +33,7 @@ namespace Cookie_Bakery
 					timer.Restart();
 				}
 			}
+            Console.WriteLine("\nHurry, this is the last Cookie!\n");
 		}
 
 		/// <summary>
@@ -55,5 +56,6 @@ namespace Cookie_Bakery
 			customer.cookies.Add(cookies[0]);
 			cookies.RemoveAt(0);
 		}
+
 	}
 }

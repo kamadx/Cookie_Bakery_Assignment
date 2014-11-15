@@ -11,6 +11,8 @@ namespace Cookie_Bakery
 	{
 		static void Main(string[] args)
 		{
+
+
 			//I tried
 			CookieBakery bakery = new CookieBakery();
 			Thread tBakery = new Thread(new ThreadStart(bakery.Start));
