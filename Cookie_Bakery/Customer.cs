@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Threading;
 
 namespace Cookie_Bakery
 {
@@ -20,6 +19,9 @@ namespace Cookie_Bakery
 			this.bakery = bakery;
 		}
 
+        /// <summary>
+        /// Buys a cookie
+        /// </summary>
 		public void buyCookies()
 		{
 			timer.Start();
@@ -32,7 +34,7 @@ namespace Cookie_Bakery
 						if (bakery.cookies.Count >= 1)
 						{
 							bakery.sellCookieTo(this);
-							Console.WriteLine("\t" + name + " bought cookie #{0}.", cookies[cookies.Count - 1]);
+                            Console.WriteLine("\t\t\t" + name + " bought cookie #{0}.", cookies[cookies.Count - 1]);
 						}
 					}
 					timer.Restart();
