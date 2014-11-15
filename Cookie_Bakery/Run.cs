@@ -17,15 +17,15 @@ namespace Cookie_Bakery
             tBakery.Start();
 
             Customer joakim = new Customer("Joakim", bakery);
-            Thread tJoakim = new Thread(new ThreadStart(joakim.checkForCookie));
+            Thread tJoakim = new Thread(new ThreadStart(joakim.buyCookies));
             tJoakim.Start();
 
             Customer jan = new Customer("Jan", bakery);
-            Thread tJan = new Thread(new ThreadStart(jan.checkForCookie));
+            Thread tJan = new Thread(new ThreadStart(jan.buyCookies));
             tJan.Start();
 
             Customer sebastian = new Customer("Sebastian", bakery);
-            Thread tSebastian = new Thread(new ThreadStart(sebastian.checkForCookie));
+            Thread tSebastian = new Thread(new ThreadStart(sebastian.buyCookies));
             tSebastian.Start();
 
             
