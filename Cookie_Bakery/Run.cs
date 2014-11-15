@@ -16,6 +16,7 @@ namespace Cookie_Bakery
             Customer Jan = new Customer("Jan", bakery);
             Customer Sebastian = new Customer("Sebastian", bakery);
 
+            bakery.Start();
         }
     }
 }

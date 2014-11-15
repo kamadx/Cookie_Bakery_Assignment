@@ -16,7 +16,7 @@ namespace Cookie_Bakery
 
 		public CookieBakery() { }
 
-		private void Start()
+		public void Start()
 		{
 
 			timer.Start();

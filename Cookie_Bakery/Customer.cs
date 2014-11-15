@@ -12,7 +12,7 @@ namespace Cookie_Bakery
 	{
 		string name;
 		public List<int> cookies = new List<int>();
-		Stopwatch timer;
+		Stopwatch timer = new Stopwatch();
 
 
 		public Customer(string name, CookieBakery bakery)
