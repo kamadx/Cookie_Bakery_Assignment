@@ -10,11 +10,16 @@ namespace Cookie_Bakery
 {
 	class CookieBakery
 	{
-		public List<int> cookies = new List<int>();
-		private Stopwatch timer = new Stopwatch();
-		private int count = 0;
+		public List<int> cookies;
+		private Stopwatch timer;
+		private int count;
 
-		public CookieBakery() { }
+		public CookieBakery() 
+		{
+			cookies = new List<int>();
+			timer = new Stopwatch();
+			count = 0;
+		}
 
 		public void Start()
 		{
