@@ -33,6 +33,7 @@ namespace Cookie_Bakery
 							Console.WriteLine("\t" + name + " bought cookie #{0}.", cookies[cookies.Count - 1]);
 						}
 					}
+					timer.Restart();
 				}
 			}
 		}
