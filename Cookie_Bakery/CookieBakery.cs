@@ -9,19 +9,21 @@ namespace Cookie_Bakery
         public List<int> cookies;
         private Stopwatch timer;
         private int count;
+        private int dailyLimit;
 
         public CookieBakery()
         {
             cookies = new List<int>();
             timer = new Stopwatch();
             count = 0;
+            dailyLimit = 70;
         }
 
         public void start()
         {
 
             timer.Start();
-            while (count <= 5)
+            while (count <= dailyLimit)
             {
                 if (timer.ElapsedMilliseconds >= 700)
                 {
